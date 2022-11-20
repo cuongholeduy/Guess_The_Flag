@@ -38,9 +38,9 @@ class ViewController: UIViewController {
         correctAnswer = Int.random(in: 0...2)
         numberOfQuestion += 1
         
-        button1.setImage(UIImage(named: countries[0]), for: .normal)
-        button2.setImage(UIImage(named: countries[1]), for: .normal)
-        button3.setImage(UIImage(named: countries[2]), for: .normal)
+        button1.setImage(UIImage(named: countries[0])?.withRenderingMode(.alwaysOriginal), for: .normal)
+        button2.setImage(UIImage(named: countries[1])?.withRenderingMode(.alwaysOriginal), for: .normal)
+        button3.setImage(UIImage(named: countries[2])?.withRenderingMode(.alwaysOriginal), for: .normal)
         
         title = "\(countries[correctAnswer].uppercased()) - Score: \(score)"
     }
